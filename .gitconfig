@@ -1,0 +1,10 @@
+# ~/.gitconfig
+
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+    cm = commit -m
+    mr = push -o merge_request.create
+    undo = reset --soft HEAD~

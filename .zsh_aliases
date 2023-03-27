@@ -1,0 +1,20 @@
+alias ts=ts-node
+alias k=kubectl
+alias tf=terraform
+alias c=clear
+
+# Sort by size (smallest first)
+alias lh="ll -Sr"
+
+# Sort disk usage by size
+alias dh="du -hs * | sort -h"
+
+# Decode jwt token 
+# Usage: echo "jwttoken" | jwt or jwt <<< "jwttoken"
+alias jwt="jq -R 'split(\".\") | .[1] | @base64d | fromjson'"
+
+# Get local network ip
+alias ip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
+
+# List open ports
+alias ports="lsof -i -P -n | grep LISTEN"
