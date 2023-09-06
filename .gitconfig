@@ -8,3 +8,5 @@
 	cm = commit -m
 	mr = push -o merge_request.create
 	undo = reset --soft HEAD~
+	gone = !git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}'
+	cleanup = !git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
