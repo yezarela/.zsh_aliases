@@ -1,8 +1,8 @@
-# .aliases
+# dotfiles
 
-Collection of git & zsh aliases
+Collection of dotfiles
 
-## How to use
+## How to use aliases
 
 ```sh
 cat .gitconfig >> ~/.gitconfig
