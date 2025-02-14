@@ -2,11 +2,13 @@
 
 [alias]
 	co = checkout
+	cb = checkout -b
 	st = status
 	ci = commit
 	br = branch
 	cm = commit -m
 	mr = !git push -o merge_request.create -u origin $(git rev-parse --abbrev-ref HEAD)
+	mro = !git push -o merge_request.create -u origin $(git rev-parse --abbrev-ref HEAD) 2>&1 | grep -o 'https://[^ ]*' | xargs open -a \"Google Chrome\"
 	undo = reset --soft HEAD~
 	skipci = push -o ci.skip
 	gone = !git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}'
